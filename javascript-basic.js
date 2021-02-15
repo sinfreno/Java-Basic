@@ -41,7 +41,7 @@ for ( cont = 0; cont < tam; cont++ ){
     console.log("l'objecte " + llistat[cont] + " es troba a la posició " + cont);
 }
 
-// ejercicio 8
+// ejercicio 8 Nivel 2
 function calculadora(oper,n1,n2){
     if (oper == "sumar"){
         console.log(parseInt(n1) + parseInt(n2));
@@ -52,7 +52,18 @@ function calculadora(oper,n1,n2){
     else if (oper == "multiplicar"){
         console.log(parseInt(n1) * parseInt(n2));
     }
+    else if (oper == "dividir"){
+        if (n2 == 0){
+            console.log("infinito");
+        }
+        else {
+            console.log(parseInt(n1) / parseInt(n2));
+        }
+    }
+
 }
 var resultat = calculadora('multiplicar',40,20);
 var resultat2 = calculadora('restar',40,20);
 var resultat3 = calculadora('sumar',40,20);
+var resultat4 = calculadora('dividir',40,0);
+var resultat5 = calculadora('dividir',40,20);
