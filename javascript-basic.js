@@ -5,13 +5,15 @@ console.log("Hello world!");
 alert("Me llamo Carlos!");
 
 // ejercicio 3
-var nom = "carlos";
-var cognom = "Pérez";
+let nom = "carlos";
+let cognom = "Pérez";
+console.log(nom + " " + cognom);
 
 // ejercicio 4
-var num1 = 5;
-var num2 = 6;
-var sum = num1 + num2;
+let num1 = 5;
+let num2 = 6;
+sum = num1 + num2;
+console.log("La suma de 5 y 6 es " + sum);
 
 // ejercicio 5
 var nota_examen = prompt("Introduce tu nota");
@@ -44,26 +46,26 @@ for ( cont = 0; cont < tam; cont++ ){
 // ejercicio 8 Nivel 2
 function calculadora(oper,n1,n2){
     if (oper == "sumar"){
-        console.log(parseInt(n1) + parseInt(n2));
+        return  parseInt(n1) + parseInt(n2);
     }
     else if (oper == "restar"){
-        console.log(parseInt(n1) - parseInt(n2));
+        return parseInt(n1) - parseInt(n2);
     }
     else if (oper == "multiplicar"){
-        console.log(parseInt(n1) * parseInt(n2));
+        return parseInt(n1) * parseInt(n2);
     }
     else if (oper == "dividir"){
         if (n2 == 0){
-            console.log("infinito");
+            return "infinito";
         }
         else {
-            console.log(parseInt(n1) / parseInt(n2));
+            return parseInt(n1) / parseInt(n2);
         }
     }
 
 }
-var resultat = calculadora('multiplicar',40,20);
-var resultat2 = calculadora('restar',40,20);
-var resultat3 = calculadora('sumar',40,20);
-var resultat4 = calculadora('dividir',40,0);
-var resultat5 = calculadora('dividir',40,20);
+
+let oper = prompt("Introduce operación", "sumar, restar, multiplicar o dividir");
+let n1 = prompt("Introduce el primer número", "1, 2, 3...");
+let n2 = prompt("Introduce el segundo número", "1, 2, 3...");
+alert( "El resultado de la operación es: " + calculadora(oper,n1,n2));
